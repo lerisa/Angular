@@ -1,0 +1,52 @@
+
+<div class="card">
+    <div class="card-body">
+
+  <!-- userForm=> template variable for the form 
+   With that code in place we're able to retrieve the validity status of the form by using userform.form.valid. 
+   Only if all input controls of the form a valid the form becomes valid too. -->
+<form novalidate #userForm="ngForm" (ngSubmit)="postForm()">
+    <h2 class="text-center">LOGIN </h2>
+    <!-- <button type="button" class="btn btn-outline-secondary mr-2" placement="top" ngbTooltip="Tooltip on top">
+        Tooltip on top
+      </button>
+      <button type="button" class="btn btn-outline-secondary mr-2" placement="right" ngbTooltip="Tooltip on right">
+        Tooltip on right
+      </button> -->
+      <!-- <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Tooltip on bottom">
+        Tooltip on bottom
+      </button> -->
+      <!-- <button type="button" class="btn btn-outline-secondary mr-2" placement="left" ngbTooltip="Tooltip on left">
+        Tooltip on left
+      </button> -->
+    <!-- <div *ngIf="userForm.submitted && !userForm.valid" class="alert alert-danger">
+        <span>Please fill the required details marked (*).</span>
+    </div> -->
+    <div *ngIf="userForm.submitted && userForm.valid && !submitSuccess" class="alert alert-danger">
+        <span>{{errorMessage}}</span>
+    </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput">Enter Name(*):</label>
+    <input type="text" class="form-control"  #uname="ngModel" name="name"  placement="bottom" ngbTooltip="Username" [(ngModel)]="name" required minlength="5">
+    <p *ngIf="uname.invalid">Name is mandatory</p>
+     <div *ngIf="uname.errors?.minlength"> has to be more then 5chararcters </div>
+    <!-- <div *ngIf="uname.errors.required">This field  is required. </div> -->
+  </div>
+
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Password(*) :</label>
+    <input type="password" class="form-control"  #ucontact="ngModel" name="contact"  placement="bottom" ngbTooltip="Password" [(ngModel)]="password" required>
+    <p *ngIf="ucontact.invalid">Mandatory</p>
+    <div *ngIf="ucontact.errors?.required">This field  is required. </div>
+   
+  </div>
+  <p *ngIf="userForm.form.valid && userForm.form.pristine"> successssssssssssssssssssssssssssssss</p>
+  <!-- <button type="submit" class="btn btn-default" [disabled]="!userForm.form.valid">Submit</button> -->
+  <!-- [disabled]="userForm.invalid" -->
+ 
+  <button type="submit" class="btn btn-primary" >Submit</button>
+</form>
+</div>
+</div>
+
+

@@ -1,0 +1,23 @@
+<h3>Top Employees</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let employee of employees" class="col-1-4"  routerLink="/detail/{{employee.employeeId}}">
+    <div class="module employee">
+      <h4>{{employee.employeeName}}</h4>
+    </div>
+  </a>
+  <button type="button" class="btn btn-primary " (click)="clickme(content)" >Click me</button>
+  <!-- <button type="button" class="btn btn-danger btn-lg btn-block" (click)="clickme(content)" >Click me</button> -->
+
+
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-body">
+      <p>Are you sure ?</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="text-right btn btn-secondary" (click)="c('True')">Yes</button>
+      <button type="button" class="btn btn-secondary" (click)="c('Close click')">No</button>
+    </div>
+  </ng-template>
+
+
+ 

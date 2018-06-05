@@ -1,0 +1,16 @@
+
+
+
+<div >
+  <br>
+    <button (click)="exportToExcel()" class="btn btn-primary m-10">Export to excel</button>
+<br>
+  <canvas baseChart height="100px" [data]="score" [labels]="name" [chartType]="pieChartType" (chartHover)="chartHovered($event)"
+    (chartClick)="chartClicked($event)" [colors]="[{backgroundColor: color }]">
+  </canvas>
+
+</div>
+<!-- if you dont put div it wont work -->
+
+
+<button class="btn btn-secondary m-10" (click)="back()">back</button>

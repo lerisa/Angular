@@ -1,0 +1,34 @@
+input.ng-valid {
+    /* Control's value is valid */
+    border: 2px solid green;
+  /* box-shadow: 5px 10px #888888; */
+  }
+  
+  input.ng-invalid {
+    /* Control's value isn't valid */
+    border: 2px solid red;
+    /* box-shadow: 5px 5px #888888; */
+  }
+  
+  input.ng-touched
+  {
+    /* Control has been visited */
+    border:10px rgb(17, 158, 214) solid;
+  }
+input.ng-dirty
+{
+  /* Control's value has been changed */
+  background-color: teal;
+}
+
+input.ng-pristine
+{
+  /* Control's value hasn't been changed */
+  border:2px black dotted;
+}
+
+
+  form{
+      margin:5%;
+  }
+  

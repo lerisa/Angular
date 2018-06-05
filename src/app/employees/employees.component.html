@@ -1,0 +1,10 @@
+
+<div>
+  <ul class="employees">
+      <li *ngFor="let employee of employees">
+        <a routerLink="/detail/{{employee.employeeId}}">
+          <span class="badge">{{employee.employeeId}}</span> {{employee.employeeName}}
+        </a> 
+      </li>
+    </ul>
+  </div>
