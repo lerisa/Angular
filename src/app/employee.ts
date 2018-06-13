@@ -6,5 +6,5 @@ export class Employee
     employeeAge:number;
     employeeAddress:String;
     employeeScore:number;
-
+    employeeJoiningDate:Date;
 }

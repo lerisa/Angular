@@ -1,0 +1,22 @@
+div
+{
+   background-color:lightgoldenrodyellow;
+   /* border:1px solid black; */
+}
+
+
+.custom-control-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    
+}
+
+
+/* .custom-control-some
+{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+} */

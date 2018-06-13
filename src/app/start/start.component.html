@@ -14,3 +14,83 @@
 
 
 <button class="btn btn-secondary m-10" (click)="back()">back</button>
+<table class="table f-80" data-sorting="true">
+  <thead>
+    <tr>
+      <th class="">ID
+        <i [ngClass]="dateFlag=== true? 'fa fa-sort-desc' : 'fa fa-sort-asc'" (click)="idSort()"></i>
+      </th>
+      <th class="">NAME </th>
+      <th class="">AGE </th>
+      <th class="">EXTN.NO </th>
+      <th class="">ADDRESS </th>
+      <th class="">JOINING DATE
+        <i [ngClass]="dateFlag=== true? 'fa fa-sort-desc' : 'fa fa-sort-asc'" (click)="dateSort()"></i>
+      </th>
+      <!-- only if true u make it descending else ascending  -->
+
+    </tr>
+  </thead>
+  <tbody *ngFor="let i of employees">
+    <tr>
+      <td>{{i.employeeId}}</td>
+      <td>{{i.employeeName}}</td>
+      <td>{{i.employeeAge}}</td>
+      <td>{{i.employeeExtensionNumber}}</td>
+      <td>{{i.employeeAddress}}</td>
+      <td>{{i.employeeJoiningDate | date:'dd-MM-yyyy'}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button class="btn btn-default" (click)="someToaster()">Toastr Tester</button>
+
+
+
+<div class="row">
+  <div class="col-md-4">
+      <div class="card">
+          <div class="card-body">
+              <h4 class="card-title">Toastr Success</h4>
+              <h6 class="card-subtitle">This is the simpel toastr with success message</h6>
+             <button class="btn btn-success" (click)="showSuccess()">Toastr Success</button>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-4">
+      <div class="card">
+          <div class="card-body">
+              <h4 class="card-title">Toastr Danger</h4>
+              <h6 class="card-subtitle">This is the simpel toastr with Danger message</h6>
+             <button class="btn btn-danger" (click)="showError()">Toastr Danger Error</button>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-4">
+      <div class="card">
+          <div class="card-body">
+              <h4 class="card-title">Toastr Warning</h4>
+              <h6 class="card-subtitle">This is the simpel toastr with Warning message</h6>
+             <button class="btn btn-warning" (click)="showWarning()">Toastr Warning</button>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-4">
+      <div class="card">
+          <div class="card-body">
+              <h4 class="card-title">Toastr Info</h4>
+              <h6 class="card-subtitle">This is the simpel toastr with Info message</h6>
+             <button class="btn btn-info" (click)="showInfo()">Toastr Info</button>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-4">
+      <div class="card">
+          <div class="card-body">
+              <h4 class="card-title">Toastr Custom</h4>
+              <h6 class="card-subtitle">This is the simpel toastr with Custom message</h6>
+             <button class="btn btn-primary" (click)="showCustom()">Toastr Custom</button>
+          </div>
+      </div>
+  </div>
+</div>

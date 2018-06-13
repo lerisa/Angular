@@ -1,3 +1,4 @@
+import { ChildComponent } from './child/child.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -7,6 +8,11 @@ import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { StartComponent } from './start/start.component';
 import { LoginComponent } from './login/login.component';
+import { ParentComponent } from './parent/parent.component';
+import { Child2Component } from './child2/child2.component';
+import { Parent2Component } from './parent2/parent2.component';
+import { Parent3Component } from './parent3/parent3.component';
+import { Child3Component } from './child3/child3.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -14,6 +20,12 @@ const routes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
     { path: 'start', component: StartComponent },
     { path: 'login', component: LoginComponent },
+    { path: 'parent', component: ParentComponent },
+    { path: 'child', component: ChildComponent },
+    { path: 'parent2', component: Parent2Component },
+    { path: 'parent3', component: Parent3Component },
+    { path: 'child2', component: Child2Component },
+    { path: 'child3', component: Child3Component },
     { path: 'detail/:id', component: EmployeeDetailComponent }
 ];
 

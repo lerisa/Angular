@@ -1,9 +1,11 @@
 import { element } from 'protractor';
 import { Employee } from './../employee';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { ExcelService } from '../excel.service';
 import { EmployeeService } from '../employee.service';
 import { Location } from '@angular/common';
+// import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import { ToastsManager } from 'ng2-toastr';
 @Component({
   selector: 'app-start',
   templateUrl: './start.component.html',
@@ -12,11 +14,43 @@ import { Location } from '@angular/common';
 export class StartComponent implements OnInit {
 
   employees:Employee[]=[];
+  public dateFlag: boolean = true;
   score:number[]=[];
   name:String[]=[];
   color:String[]=[];
-  constructor(private employeesService:EmployeeService,private excelService: ExcelService,private location:Location) { }
+  constructor(public toastr: ToastsManager, vcr: ViewContainerRef,private employeesService:EmployeeService,private excelService: ExcelService,private location:Location) {
+    this.toastr.setRootViewContainerRef(vcr);
+   }
 
+   someToaster()
+   {
+     this.showSuccess();
+   }
+  
+   
+ showSuccess() {
+console.log("hi");
+
+   this.toastr.success('You are awesome!', 'Success!');
+   console.log("done");
+   
+ }
+
+ showError() {
+   this.toastr.error('This is not good!', 'Oops!');
+ }
+
+ showWarning() {
+   this.toastr.warning('You are being warned.', 'Alert!');
+ }
+
+ showInfo() {
+   this.toastr.info('Just some information for you.');
+ }
+ 
+ showCustom() {
+   this.toastr.custom('<span style="color: red">Message in red.</span>', null, {enableHTML: true});
+ }
   ngOnInit() {
     this.getEmployees();
   }
@@ -25,6 +59,60 @@ export class StartComponent implements OnInit {
   {this.location.back();
     //window.location.back();
   }
+
+ 
+   
+ 
+  idSort()
+  {
+    if(this.dateFlag === true){
+      console.log("hi desc");
+      
+      this.dateFlag = false;
+      this.employees.sort(function (a, b) {
+              if (a.employeeId < b.employeeId)
+                return 1;
+              if (a.employeeId > b.employeeId)
+                return -1;
+              return 0;
+            });
+    }else {
+      console.log("hi asc");
+      this.dateFlag = true;
+      this.employees.sort(function (a, b) {
+        if (a.employeeId < b.employeeId)
+          return -1;
+        if (a.employeeId > b.employeeId)
+          return 1;
+        return 0;
+      });  
+    }
+  }
+  dateSort(): void {
+    if(this.dateFlag === true){
+      console.log("hi desc");
+      
+      this.dateFlag = false;
+      this.employees.sort(function (a, b) {
+              if (a.employeeJoiningDate < b.employeeJoiningDate)
+                return 1;
+              if (a.employeeJoiningDate > b.employeeJoiningDate)
+                return -1;
+              return 0;
+            });
+    }else {
+      console.log("hi asc");
+      this.dateFlag = true;
+      this.employees.sort(function (a, b) {
+        if (a.employeeJoiningDate < b.employeeJoiningDate)
+          return -1;
+        if (a.employeeJoiningDate > b.employeeJoiningDate)
+          return 1;
+        return 0;
+      });  
+    }
+  }
+
 
   
 

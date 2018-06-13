@@ -12,10 +12,23 @@ import { EmployeeService } from './employee.service';
 import { StartComponent } from './start/start.component';
 import { ExcelService } from './excel.service';
 import { ChartsModule } from 'ng2-charts';
-import { ChartistModule } from 'ng-chartist';
+// import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import { ToastsManager } from 'ng2-toastr';
+import {ToastModule} from 'ng2-toastr';
+// import { ChartistModule } from 'ng-chartist';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './login/login.component';
+// import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { Parent2Component } from './parent2/parent2.component';
+import { Child2Component } from './child2/child2.component';
+import { Parent3Component } from './parent3/parent3.component';
+import { Child3Component } from './child3/child3.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DataService } from './data.service';
+import { ParentComponent } from './parent/parent.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,13 +36,21 @@ import { LoginComponent } from './login/login.component';
     EmployeesComponent,
     EmployeeDetailComponent,
     StartComponent,
-    LoginComponent
+    LoginComponent,
+    ParentComponent,
+    // ParentComponent,
+    ChildComponent,
+    Parent2Component,
+    Child2Component,
+    Parent3Component,
+    Child3Component
   ],
   imports: [
-    BrowserModule, FormsModule, AppRoutingModule, ChartsModule, ChartistModule,NgbModule.forRoot()
+    // ChartistModule ,BrowserAnimationsModule,,NgbModule.forRoot()
+    ToastModule.forRoot(), BrowserModule, FormsModule, AppRoutingModule, ChartsModule,BrowserAnimationsModule,NgbModule.forRoot()
 
   ],
-  providers: [EmployeeService, ExcelService],
+  providers: [EmployeeService, ExcelService,DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
