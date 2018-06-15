@@ -13,6 +13,7 @@ import { Child2Component } from './child2/child2.component';
 import { Parent2Component } from './parent2/parent2.component';
 import { Parent3Component } from './parent3/parent3.component';
 import { Child3Component } from './child3/child3.component';
+import { AlertComponent } from './alert/alert.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -26,7 +27,8 @@ const routes: Routes = [
     { path: 'parent3', component: Parent3Component },
     { path: 'child2', component: Child2Component },
     { path: 'child3', component: Child3Component },
-    { path: 'detail/:id', component: EmployeeDetailComponent }
+    { path: 'detail/:id', component: EmployeeDetailComponent },
+    { path: 'alert', component: AlertComponent },
 ];
 
 @NgModule({

@@ -1,0 +1,12 @@
+.alert-custom {
+    color: #99004d;
+    background-color:#5f6263;
+    border: #800040 10px solid;
+  }
+
+
+  host >>> .alert-custom {
+    color: #99004d;
+    background-color: #f169b4;
+    border-color: #800040;
+  }
