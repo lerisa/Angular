@@ -30,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataService } from './data.service';
 import { ParentComponent } from './parent/parent.component';
 import { AlertComponent } from './alert/alert.component';
+import { InfoComponent } from './info/info.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,8 @@ import { AlertComponent } from './alert/alert.component';
     Child2Component,
     Parent3Component,
     Child3Component,
-    AlertComponent
+    AlertComponent,
+    InfoComponent
   ],
   imports: [
     // ChartistModule ,BrowserAnimationsModule,,NgbModule.forRoot()
