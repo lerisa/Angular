@@ -1,0 +1,35 @@
+<!-- <p *ngFor="let p of person">
+ {{ p.name }}
+ </p> -->
+<br>
+
+ <div class="row">
+
+
+
+  <div id="loop" *ngFor='let p of person' class="col-md-6">
+    <div class="card  ">
+      <div class="card-body">
+
+<table>
+	<tr>
+    	<td colspan=1> <h1 class="text-black"><i class="icon-user-following"></i></h1></td>
+    	<td colspan=2>  <span class="lead"><b>{{p.name}}</b> </span></td>
+    </tr>
+	<tr>
+    	<td colspan=1>{{p.id}}</td>
+    	<td colspan=1>{{p.rollno}} </td>
+    	<td colspan=1>{{p.age}}</td>
+    </tr>
+	<tr >
+    	<td colspan=1>Id</td>
+    	<td colspan=1>Name</td>
+    	<td colspan=1>RollNo</td>
+    </tr>
+</table>
+      
+      </div>
+    </div>
+  </div>
+</div>
+

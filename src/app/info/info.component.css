@@ -1,0 +1,37 @@
+.card-title
+{
+    color:	#383838;
+}
+
+.icon-user-following
+{  color:	#383838;
+
+}
+
+.card
+{
+  margin-bottom: 20px;
+}
+
+
+.card-title
+{
+padding:10px;
+}
+
+.icon
+{
+padding:10px;
+color:	#383838;
+}
+li
+
+{
+    border-right:1px  #DCDCDC solid;
+
+}
+
+.row
+{
+    padding:10%;
+}
