@@ -1,3 +1,4 @@
+import { ApiComponent } from './api/api.component';
 import { ChildComponent } from './child/child.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -31,6 +32,7 @@ const routes: Routes = [
     { path: 'detail/:id', component: EmployeeDetailComponent },
     { path: 'alert', component: AlertComponent },
     { path: 'info', component: InfoComponent },
+    {path:'api',component:ApiComponent}
 ];
 
 @NgModule({

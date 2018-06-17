@@ -31,6 +31,9 @@ import { DataService } from './data.service';
 import { ParentComponent } from './parent/parent.component';
 import { AlertComponent } from './alert/alert.component';
 import { InfoComponent } from './info/info.component';
+import { ApiComponent } from './api/api.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,11 +50,12 @@ import { InfoComponent } from './info/info.component';
     Parent3Component,
     Child3Component,
     AlertComponent,
-    InfoComponent
+    InfoComponent,
+    ApiComponent
   ],
   imports: [
     // ChartistModule ,BrowserAnimationsModule,,NgbModule.forRoot()
-    ToastModule.forRoot(), BrowserModule, FormsModule, AppRoutingModule, ChartsModule,BrowserAnimationsModule,NgbModule.forRoot()
+    ToastModule.forRoot(), BrowserModule, FormsModule, AppRoutingModule, ChartsModule,BrowserAnimationsModule,NgbModule.forRoot(),HttpModule,HttpClientModule
 
   ],
   providers: [EmployeeService, ExcelService,DataService],

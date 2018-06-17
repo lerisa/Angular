@@ -1,0 +1,18 @@
+
+
+
+<table class="table f-80">
+    <tr>
+      <th>Yield</th>
+      <th>Variety</th>
+      <th>Year</th>
+      <th>Site</th>
+    </tr>
+    <tr *ngFor='let i of someVar'>
+      <td colspan="1">{{i.yield}}</td>
+      <td>{{i.variety}}</td>
+      <td >{{i.year}}</td>
+      <td rowspan="1">{{i.site}}</td>
+    </tr>
+   
+  </table>
