@@ -1,3 +1,4 @@
+import { OtherngbComponentsComponent } from './otherngb-components/otherngb-components.component';
 import { ApiComponent } from './api/api.component';
 import { ChildComponent } from './child/child.component';
 import { NgModule } from '@angular/core';
@@ -34,7 +35,8 @@ const routes: Routes = [
     { path: 'alert', component: AlertComponent },
     { path: 'info', component: InfoComponent },
     {path:'api',component:ApiComponent},
-    {path:'smartTable',component:SmartTableComponent}
+    {path:'smartTable',component:SmartTableComponent},
+    {path:'ngb',component:OtherngbComponentsComponent}
 ];
 
 @NgModule({

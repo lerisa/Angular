@@ -1,3 +1,4 @@
+import { OtherngbComponentsComponent } from './otherngb-components/otherngb-components.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -56,7 +57,8 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
     InfoComponent,
     ApiComponent,
     SmartTableComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    OtherngbComponentsComponent
   ],
   imports: [
     // ChartistModule ,BrowserAnimationsModule,,NgbModule.forRoot()

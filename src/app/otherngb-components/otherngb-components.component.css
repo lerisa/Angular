@@ -1,0 +1,26 @@
+.image1 {
+  width: 100%;
+  /* height: 100%; */
+}
+
+/* body {
+    background: url(bgimage.jpg) no-repeat;
+    background-size: 100%;
+  } */
+
+.test {
+  padding: 10%;
+}
+
+#hover1 {
+  padding: 10%;
+}
+
+.timePicker {
+  padding: 10%;
+}
+
+.tooltip1 {
+  padding-left: 20%;
+  padding-bottom: 20%;
+}
