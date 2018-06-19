@@ -1,5 +1,12 @@
+<!-- spinner code works only if data received from server  -->
+<ng-container *ngIf="showSpinner; then loading; else loaded">
+</ng-container>
 
+<ng-template #loading>
+  <app-spinner></app-spinner>
+</ng-template>
 
+<ng-template #loaded>
 
 <div >
   <br>
@@ -94,3 +101,6 @@
       </div>
   </div>
 </div>
+
+
+</ng-template>

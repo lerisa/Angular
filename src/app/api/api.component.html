@@ -1,5 +1,12 @@
 
+<ng-container *ngIf="showSpinner; then loading; else loaded">
+</ng-container>
 
+<ng-template #loading>
+  <app-spinner></app-spinner>
+</ng-template>
+
+<ng-template #loaded>
 
 <table class="table f-80">
     <tr>
@@ -16,3 +23,5 @@
     </tr>
    
   </table>
+
+</ng-template>

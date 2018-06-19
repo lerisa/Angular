@@ -18,6 +18,7 @@ export class StartComponent implements OnInit {
   score:number[]=[];
   name:String[]=[];
   color:String[]=[];
+  showSpinner:boolean=true;
   constructor(public toastr: ToastsManager, vcr: ViewContainerRef,private employeesService:EmployeeService,private excelService: ExcelService,private location:Location) {
     this.toastr.setRootViewContainerRef(vcr);
    }
@@ -119,6 +120,7 @@ console.log("hi");
   getEmployees()
   {
     this.employeesService.getEmployees().subscribe(e=>{
+      this.showSpinner=false;
       this.employees=e;
       console.log(this.employees);
       this.employees.forEach(element=>

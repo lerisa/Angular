@@ -16,6 +16,7 @@ import { Parent3Component } from './parent3/parent3.component';
 import { Child3Component } from './child3/child3.component';
 import { AlertComponent } from './alert/alert.component';
 import { InfoComponent } from './info/info.component';
+import { SmartTableComponent } from './smart-table/smart-table.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -32,7 +33,8 @@ const routes: Routes = [
     { path: 'detail/:id', component: EmployeeDetailComponent },
     { path: 'alert', component: AlertComponent },
     { path: 'info', component: InfoComponent },
-    {path:'api',component:ApiComponent}
+    {path:'api',component:ApiComponent},
+    {path:'smartTable',component:SmartTableComponent}
 ];
 
 @NgModule({

@@ -1,3 +1,4 @@
+import { SpinnerComponent } from './spinner/spinner.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
@@ -34,6 +35,8 @@ import { InfoComponent } from './info/info.component';
 import { ApiComponent } from './api/api.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
+import { SmartTableComponent } from './smart-table/smart-table.component';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,11 +54,13 @@ import { HttpModule } from '@angular/http';
     Child3Component,
     AlertComponent,
     InfoComponent,
-    ApiComponent
+    ApiComponent,
+    SmartTableComponent,
+    SpinnerComponent
   ],
   imports: [
     // ChartistModule ,BrowserAnimationsModule,,NgbModule.forRoot()
-    ToastModule.forRoot(), BrowserModule, FormsModule, AppRoutingModule, ChartsModule,BrowserAnimationsModule,NgbModule.forRoot(),HttpModule,HttpClientModule
+    Ng2SmartTableModule, ToastModule.forRoot(), BrowserModule, FormsModule, AppRoutingModule, ChartsModule,BrowserAnimationsModule,NgbModule.forRoot(),HttpModule,HttpClientModule
 
   ],
   providers: [EmployeeService, ExcelService,DataService],
